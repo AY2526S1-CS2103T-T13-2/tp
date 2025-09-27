@@ -10,7 +10,8 @@
         "dylan-teo": "Dylan Teo",
         "alden": "Alden",
         "mitchel-lee": "Mitchel Lee",
-        "mattheus-cheong": "Mattheus Cheong"
+        "mattheus-cheong": "Mattheus Cheong",
+        "xu-an": "Xu An"
       },
       "headingKeywords": {}
     },
@@ -140,6 +141,11 @@
       "headings": {
         "project-addressbook-level-3": "Project: AddressBook Level 3"
       },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/xateh.md",
+      "headings": {},
       "headingKeywords": {}
     }
   ]
