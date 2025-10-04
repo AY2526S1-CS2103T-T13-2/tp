@@ -4,6 +4,9 @@ import static java.util.Objects.requireNonNull;
 
 import seedu.address.model.person.Person;
 
+/**
+ * Common user-visible messages and helpers for formatting them.
+ */
 public class Messages {
     public static final String MESSAGE_UNKNOWN_COMMAND = "Unknown command";
     // NOTE: there is one space before the newline
