@@ -7,55 +7,51 @@
 
 We are a team based in the [School of Computing, National University of Singapore](http://www.comp.nus.edu.sg).
 
-You can reach us at the email `seer[at]comp.nus.edu.sg`
+You can reach us at the email `e1398671@u.nus.edu`
 
 ## Project team
 
-### John Doe
+### Dylan Teo
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/dylantjy.png" width="200px">
 
-[[homepage](http://www.comp.nus.edu.sg/~damithch)]
-[[github](https://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
+[[github](https://github.com/dylantjy)]
 
-* Role: Project Advisor
-
-### Jane Doe
-
-<img src="images/johndoe.png" width="200px">
-
-[[github](http://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
-
-* Role: Team Lead
+* Role: Documentation; MarkBind administration; Project site
 * Responsibilities: UI
 
-### Johnny Doe
+### Alden
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/denz-denz.png" width="200px">
 
-[[github](http://github.com/johndoe)] [[portfolio](team/johndoe.md)]
+[[github](https://github.com/denz-denz)]
 
-* Role: Developer
-* Responsibilities: Data
+* Role: Testing
+* Responsibilities: Model
 
-### Jean Doe
+### Mitchel Lee
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/actualmulti.png" width="200px">
 
-[[github](http://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
+[[github](http://github.com/actualmulti)]
 
-* Role: Developer
-* Responsibilities: Dev Ops + Threading
+* Role: Project Management
+* Responsibilities: Model
 
-### James Doe
+### Mattheus Cheong
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/mattcce.png" width="200px">
 
-[[github](http://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
+[[github](https://github.com/mattcce)]
 
-* Role: Developer
-* Responsibilities: UI
+* Role: DevOps, CI/CD
+* Responsibilities: Parsing
+
+### Xu An
+
+<img src="images/xateh.png" width="200px">
+
+[[github](https://github.com/xateh)]
+
+* Role: Documentation
+* Responsibility: Model
