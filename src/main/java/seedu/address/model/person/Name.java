@@ -35,6 +35,7 @@ public class Name {
      * Returns true if a given string is a valid name.
      */
     public static boolean isValidName(String test) {
+        requireNonNull(test);
         return test.matches(VALIDATION_REGEX);
     }
 
@@ -63,5 +64,5 @@ public class Name {
     public int hashCode() {
         return fullName.hashCode();
     }
-
 }
+ 
