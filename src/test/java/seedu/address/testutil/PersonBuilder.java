@@ -28,7 +28,7 @@ public class PersonBuilder {
     private Email email;
     private Address address;
     private Set<Tag> tags;
-    private Remark remark; 
+    private Remark remark;
 
     /**
      * Creates a {@code PersonBuilder} with the default details.
@@ -89,8 +89,8 @@ public class PersonBuilder {
     public PersonBuilder withRemark(String remark) {
         this.remark = new Remark(remark);
         return this;
-    } 
-    
+    }
+
     /**
      * Sets the {@code Email} of the {@code Person} that we are building.
      */

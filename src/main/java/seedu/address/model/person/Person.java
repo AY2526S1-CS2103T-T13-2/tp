@@ -39,7 +39,7 @@ public class Person {
         this.tags.addAll(tags);
         this.remark = remark;
     }
-   
+
     public Person(Name name, Phone phone, Email email, Address address, Set<Tag> tags) {
         this(name, phone, email, address, tags, new Remark("")); // default empty remark
     }
@@ -62,7 +62,7 @@ public class Person {
 
     public Remark getRemark() {
         return remark;
-    } 
+    }
 
     /**
      * Returns an immutable tag set, which throws {@code UnsupportedOperationException}

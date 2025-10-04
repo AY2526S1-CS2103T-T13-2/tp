@@ -17,7 +17,7 @@ import seedu.address.model.person.Remark;
 import seedu.address.logic.commands.exceptions.CommandException;
 
 public class RemarkCommandTest {
-    
+
     @Test
     public void equals() {
         final RemarkCommand standardCommand =
