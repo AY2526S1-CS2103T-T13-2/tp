@@ -30,14 +30,14 @@ public class PersonCard extends UiPart<Region> {
 
     @FXML
     private HBox cardPane;
-   
+
     /**
     * Container that hosts zero or more {@code key : value} rows for user-defined (custom) fields.
     * <p>Hidden when empty so the card layout remains identical to vanilla AB3.</p>
     */
     @FXML
     private VBox customFieldsBox;
-   
+
     @FXML
     private Label name;
     @FXML
@@ -75,7 +75,7 @@ public class PersonCard extends UiPart<Region> {
 
         Label valueLabel = new Label(" " + value);
         valueLabel.getStyleClass().add("Label");
-        
+
         HBox pill = new HBox(4, keyLabel, valueLabel);
         pill.getStyleClass().add("custom-field-pill");
 
@@ -128,11 +128,11 @@ public class PersonCard extends UiPart<Region> {
         // If there are no rows, the entire section is hidden to keep the card compact.
         // Once Person#getCustomFields() is added on the model, the reflection-based
         // lookup below will start returning data without additional UI changes.
-        
+
         customFieldsBox.getChildren().clear();
-        
+
         var fields = tryGetCustomFields(person); // empty for now; real values later
-        
+
         // Stable alphabetical order (case-insensitive) so cards are predictable to scan.
         var keys = new java.util.ArrayList<>(fields.keySet());
         java.util.Collections.sort(keys, String.CASE_INSENSITIVE_ORDER);
@@ -143,18 +143,18 @@ public class PersonCard extends UiPart<Region> {
                 customFieldsBox.getChildren().add(kvRow(key, val));
             }
         }
-       
+
         // DEV PREVIEW:
         // Launch with: ./gradlew run -Ddev.customfields.preview=true
         // to visualize two sample rows before the model feature lands.
-        if (customFieldsBox.getChildren().isEmpty() 
+        if (customFieldsBox.getChildren().isEmpty()
                && (Boolean.getBoolean("dev.customfields.preview") || System.getenv("CF_PREVIEW") != null)) {
             customFieldsBox.getChildren().addAll(
             kvRow("asset-class", "gold"),
             kvRow("company", "Goldman Sachs")
             );
         }
-        
+
         if (customFieldsBox.getChildren().isEmpty()) {
             hide(customFieldsBox); // hide LAST
         }
