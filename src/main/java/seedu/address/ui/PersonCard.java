@@ -52,63 +52,6 @@ public class PersonCard extends UiPart<Region> {
     private FlowPane tags;
 
     /**
-    * Hides a node from both view and layout.
-    * <p>Using {@code visible=false} stops rendering; {@code managed=false} removes it from
-    * the parent's layout pass so no empty space is reserved.</p>
-    * @param n node to hide
-    */
-    private void hide(Node n) {
-        n.setManaged(false);
-        n.setVisible(false);
-    }
-
-    /**
-    * Builds a single {@code key : value} row for the custom fields section.
-    * <p>Reuses the small-label style so the row visually matches the rest of the card.</p>
-    * @param key   field name (displayed as {@code key: })
-    * @param value field value text
-    * @return a horizontal row containing the labels
-    */
-    private HBox kvRow(String key, String value) {
-        Label keyLabel = new Label(key + ":");
-        keyLabel.getStyleClass().add("Label");
-
-        Label valueLabel = new Label(" " + value);
-        valueLabel.getStyleClass().add("Label");
-
-        HBox pill = new HBox(4, keyLabel, valueLabel);
-        pill.getStyleClass().add("custom-field-pill");
-
-        return new HBox(pill);
-    }
-
-
-    /**
-    * Attempts to obtain a map of custom fields from {@code person} without creating a compile-time
-    * dependency on model changes.
-    * <p>This uses reflection to call {@code getCustomFields()} if/when it exists. If absent or
-    * incompatible, returns an empty map. This lets the UI ship now and "light up" automatically
-    * later when the model adds the method.</p>
-    * @param person the model object for this card
-    * @return a non-null map of {@code key -> value} pairs (empty if none/unsupported)
-    */
-    @SuppressWarnings("unchecked")
-    private java.util.Map<String, Object> tryGetCustomFields(Object person) {
-        try {
-            var m = person.getClass().getMethod("getCustomFields");
-            Object result = m.invoke(person);
-            if (result instanceof java.util.Map<?, ?> map) {
-                var out = new java.util.LinkedHashMap<String, Object>();
-                map.forEach((k, v) -> { if (k != null) out.put(String.valueOf(k), v); });
-                return out;
-            }
-        } catch (Exception ignored) {
-            // Method not present yet, or not accessible; fall through to empty map.
-        }
-        return java.util.Map.of();
-    }
-
-    /**
      * Creates a {@code PersonCode} with the given {@code Person} and index to display.
      */
     public PersonCard(Person person, int displayedIndex) {
@@ -150,13 +93,73 @@ public class PersonCard extends UiPart<Region> {
         if (customFieldsBox.getChildren().isEmpty()
                && (Boolean.getBoolean("dev.customfields.preview") || System.getenv("CF_PREVIEW") != null)) {
             customFieldsBox.getChildren().addAll(
-            kvRow("asset-class", "gold"),
-            kvRow("company", "Goldman Sachs")
+                kvRow("asset-class", "gold"),
+                kvRow("company", "Goldman Sachs")
             );
         }
 
         if (customFieldsBox.getChildren().isEmpty()) {
             hide(customFieldsBox); // hide LAST
         }
+    }
+
+    /**
+    * Hides a node from both view and layout.
+    * <p>Using {@code visible=false} stops rendering; {@code managed=false} removes it from
+    * the parent's layout pass so no empty space is reserved.</p>
+    * @param n node to hide
+    */
+    private void hide(Node n) {
+        n.setManaged(false);
+        n.setVisible(false);
+    }
+
+    /**
+    * Builds a single {@code key : value} row for the custom fields section.
+    * <p>Reuses the small-label style so the row visually matches the rest of the card.</p>
+    * @param key   field name (displayed as {@code key: })
+    * @param value field value text
+    * @return a horizontal row containing the labels
+    */
+    private HBox kvRow(String key, String value) {
+        Label keyLabel = new Label(key + ":");
+        keyLabel.getStyleClass().add("Label");
+
+        Label valueLabel = new Label(" " + value);
+        valueLabel.getStyleClass().add("Label");
+
+        HBox pill = new HBox(4, keyLabel, valueLabel);
+        pill.getStyleClass().add("custom-field-pill");
+
+        return new HBox(pill);
+    }
+
+    /**
+    * Attempts to obtain a map of custom fields from {@code person} without creating a compile-time
+    * dependency on model changes.
+    * <p>This uses reflection to call {@code getCustomFields()} if/when it exists. If absent or
+    * incompatible, returns an empty map. This lets the UI ship now and "light up" automatically
+    * later when the model adds the method.</p>
+    * @param person the model object for this card
+    * @return a non-null map of {@code key -> value} pairs (empty if none/unsupported)
+    */
+    @SuppressWarnings("unchecked")
+    private java.util.Map<String, Object> tryGetCustomFields(Object person) {
+        try {
+            var m = person.getClass().getMethod("getCustomFields");
+            Object result = m.invoke(person);
+            if (result instanceof java.util.Map<?, ?> map) {
+                var out = new java.util.LinkedHashMap<String, Object>();
+                map.forEach((k, v) -> {
+                    if (k != null) {
+                        out.put(String.valueOf(k), v);
+                    }
+                });
+                return out;
+            }
+        } catch (Exception ignored) {
+            // Method not present yet, or not accessible; fall through to empty map.
+        }
+        return java.util.Map.of();
     }
 }
