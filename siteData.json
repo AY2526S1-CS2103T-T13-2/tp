@@ -63,7 +63,14 @@
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
         "launch-and-shutdown": "Launch and shutdown",
         "deleting-a-person": "Deleting a person",
-        "saving-data": "Saving data"
+        "saving-data": "Saving data",
+        "appendix-lexing-and-parsing": "Appendix: Lexing and Parsing",
+        "overarching-architecture": "Overarching Architecture",
+        "lexer-architecture": "Lexer Architecture",
+        "parser-architecture": "Parser Architecture",
+        "ast-processing": "AST Processing",
+        "lexer-parser-interface-commands": "Lexer/Parser Interface: Commands",
+        "command-grammar": "Command Grammar"
       },
       "headingKeywords": {}
     },
