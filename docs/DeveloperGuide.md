@@ -283,9 +283,11 @@ In addition, they:
 **Value Proposition**: **AssetSphere** strives in streamlining contact tracking, and managing complex networks with business partners and critical contacts within and outside the company. This application is valuable for asset managers of multinational companies, improving reliability, navigability and efficiency of their contact chain, one contact at a time.
 
 ### User Stories
-
 **User type/role**<br />_As a_ | **Function**<br />_I can_                                               | **Benefit**<br />_so that_ | Priority
 -|-------------------------------------------------------------------------| - | -
+Asset manager | find for contacts using keywords based on all fields | cast wider searches | Must-have (✓✓)
+Asset manager | additively add tags | I do not have to waste time retyping a full list of tags whenever I wish to update a user's tags | Must-have (✓✓)
+Asset manager | remove existing tags | I do not have to waste time retyping a full list of tags whenever I wish to update a user's tags | Must-have (✓✓)
 Asset manager | save data between sessions                                              | I don’t have to re-enter information after relaunching | Must-have (✓✓)
 Organised asset manager | categorise contacts based on asset classes                              | I can quickly identify relevant people per portfolio | Must-have (✓✓)
 Detailed asset manager | customise client profiles with custom fields                            | I can track unique client details/needs | Must-have (✓✓)
