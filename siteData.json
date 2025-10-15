@@ -64,13 +64,15 @@
         "launch-and-shutdown": "Launch and shutdown",
         "deleting-a-person": "Deleting a person",
         "saving-data": "Saving data",
-        "appendix-lexing-and-parsing": "Appendix: Lexing and Parsing",
+        "appendix-command-assembly": "Appendix: Command Assembly",
         "overarching-architecture": "Overarching Architecture",
         "lexer-architecture": "Lexer Architecture",
         "parser-architecture": "Parser Architecture",
         "ast-processing": "AST Processing",
         "lexer-parser-interface-commands": "Lexer/Parser Interface: Commands",
-        "command-grammar": "Command Grammar"
+        "command-grammar": "Command Grammar",
+        "resolution-architecture": "Resolution Architecture",
+        "validation-architecture": "Validation Architecture"
       },
       "headingKeywords": {}
     },
