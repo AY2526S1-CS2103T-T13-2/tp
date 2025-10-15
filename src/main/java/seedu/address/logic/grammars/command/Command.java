@@ -1,7 +1,9 @@
 package seedu.address.logic.grammars.command;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 import seedu.address.logic.grammars.command.lexer.CommandLexer;
 import seedu.address.logic.grammars.command.lexer.LexerException;
@@ -17,9 +19,9 @@ import seedu.address.logic.grammars.command.parser.ast.visitors.CommandExtractor
 public class Command {
     private final String imperative;
     private final String[] parameters;
-    private final HashMap<String, String> options;
+    private final Map<String, String> options;
 
-    private Command(String imperative, String[] parameters, HashMap<String, String> options) {
+    private Command(String imperative, String[] parameters, Map<String, String> options) {
         this.imperative = imperative;
         this.parameters = parameters;
         this.options = options;
@@ -31,7 +33,7 @@ public class Command {
     public static class CommandBuilder {
         private String imperative;
         private final ArrayList<String> parameters = new ArrayList<>();
-        private final HashMap<String, String> options = new HashMap<>();
+        private final Map<String, String> options = new LinkedHashMap<>();
 
         public CommandBuilder() {
         }
@@ -60,7 +62,9 @@ public class Command {
         public Command build() {
             String imperative = this.imperative;
             String[] parameters = this.parameters.toArray(String[]::new);
-            HashMap<String, String> options = this.options;
+            // Allows nulls (for flag-style options), but prevents external mutation
+            Map<String, String> options =
+                Collections.unmodifiableMap(new LinkedHashMap<>(this.options));
             return new Command(imperative, parameters, options);
         }
     }
@@ -114,7 +118,7 @@ public class Command {
     /*
      * Returns a read-only view of all option key→value pairs.
      */
-    public java.util.Map<String, String> getAllOptions() {
-        return java.util.Collections.unmodifiableMap(this.options);
+    public Map<String, String> getAllOptions() {
+        return this.options;
     }
 }
