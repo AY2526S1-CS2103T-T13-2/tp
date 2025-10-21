@@ -125,6 +125,8 @@
         "editing-a-person-edit": "Editing a person : edit",
         "adding-a-tag-tag": "Adding a tag : tag",
         "removing-a-tag-untag": "Removing a tag : untag",
+        "adding-information-to-a-person-infoedit": "Adding information to a person: infoedit",
+        "viewing-information-of-a-person-infoview": "Viewing information of a person: infoview",
         "locating-persons-by-name-find": "Locating persons by name: find",
         "deleting-a-person-delete": "Deleting a person : delete",
         "clearing-all-entries-clear": "Clearing all entries : clear",
