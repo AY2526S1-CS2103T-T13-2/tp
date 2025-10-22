@@ -124,6 +124,24 @@
       "headingKeywords": {}
     },
     {
+      "src": "SessionFormat.md",
+      "headings": {
+        "session-save-format": "Session Save Format",
+        "file-location-and-naming": "File Location and Naming",
+        "top-level-structure": "Top-Level Structure",
+        "formatversion": "formatVersion",
+        "savedat": "savedAt",
+        "addressbookpath": "addressBookPath",
+        "searchkeywords": "searchKeywords",
+        "commandhistory": "commandHistory",
+        "guisettings": "guiSettings",
+        "validation-rules": "Validation Rules",
+        "extensibility": "Extensibility",
+        "security-considerations": "Security Considerations"
+      },
+      "headingKeywords": {}
+    },
+    {
       "src": "SettingUp.md",
       "title": "Setting up and getting started",
       "headings": {
