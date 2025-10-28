@@ -16,31 +16,6 @@
       "headingKeywords": {}
     },
     {
-      "src": "BareCommand.md",
-      "headings": {
-        "barecommand-api-reference": "BareCommand API Reference",
-        "overview": "Overview",
-        "core-concepts": "Core Concepts",
-        "accessing-parameters": "Accessing Parameters",
-        "getting-individual-parameters": "Getting Individual Parameters",
-        "getting-all-parameters": "Getting All Parameters",
-        "accessing-options": "Accessing Options",
-        "checking-option-presence": "Checking Option Presence",
-        "getting-a-single-option-value": "Getting a Single Option Value",
-        "getting-multiple-option-values": "Getting Multiple Option Values",
-        "getting-all-options": "Getting All Options",
-        "common-validation-patterns": "Common Validation Patterns",
-        "validating-parameter-count": "Validating Parameter Count",
-        "parsing-typed-parameters": "Parsing Typed Parameters",
-        "validating-required-options": "Validating Required Options",
-        "handling-optional-options-with-defaults": "Handling Optional Options with Defaults",
-        "validating-option-values": "Validating Option Values",
-        "complete-extractor-example": "Complete Extractor Example",
-        "best-practices": "Best Practices"
-      },
-      "headingKeywords": {}
-    },
-    {
       "src": "CommandAssembly.md",
       "headings": {
         "command-assembly": "Command Assembly",
