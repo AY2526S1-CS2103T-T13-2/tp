@@ -69,8 +69,6 @@
         "commands": "Commands",
         "application-lifecycle-and-testability": "Application lifecycle and testability",
         "info-command-feature": "Info Command Feature",
-        "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
-        "proposed-data-archiving": "[Proposed] Data archiving",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
         "appendix-requirements": "Appendix: Requirements",
         "product-scope": "Product Scope",
@@ -79,9 +77,10 @@
         "non-functional-requirements": "Non-Functional Requirements",
         "glossary": "Glossary",
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
+        "covering-individual-commands": "Covering individual commands",
         "launch-and-shutdown": "Launch and shutdown",
-        "deleting-a-person": "Deleting a person",
-        "saving-data": "Saving data"
+        "scenario-based-end-to-end-testing": "Scenario-based end-to-end testing",
+        "appendix-effort": "Appendix: Effort"
       },
       "headingKeywords": {}
     },
