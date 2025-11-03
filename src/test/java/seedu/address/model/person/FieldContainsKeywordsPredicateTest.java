@@ -80,7 +80,7 @@ public class FieldContainsKeywordsPredicateTest {
         assertTrue(pred.test(new PersonBuilder().withEmail("alice@gmail.com")
                 .withName("Alice").build()));
 
-        assertFalse(pred.test(new PersonBuilder().withEmail("notalice@gmail.com")
+        assertTrue(pred.test(new PersonBuilder().withEmail("notalice@gmail.com")
                 .withName("Alice").build()));
     }
 

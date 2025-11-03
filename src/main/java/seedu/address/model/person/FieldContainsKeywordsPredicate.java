@@ -5,7 +5,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Predicate;
 
-import seedu.address.commons.util.StringUtil;
 import seedu.address.commons.util.ToStringBuilder;
 
 /**
@@ -102,30 +101,30 @@ public class FieldContainsKeywordsPredicate implements Predicate<Person> {
         Map<String, String> customs = person.getCustomFields();
         for (String keyword : keywords) {
             if (searchName
-                    && StringUtil.containsWordIgnoreCase(person.getName().fullName, keyword)) {
+                    && person.getName().fullName.toLowerCase().contains(keyword.toLowerCase())) {
                 return true;
             }
             if (searchPhone
-                    && StringUtil.containsWordIgnoreCase(person.getPhone().value, keyword)) {
+                    && person.getPhone().value.contains(keyword.toLowerCase())) {
                 return true;
             }
             if (searchEmail
-                    && StringUtil.containsWordIgnoreCase(person.getEmail().value, keyword)) {
+                    && person.getEmail().value.toLowerCase().contains(keyword.toLowerCase())) {
                 return true;
             }
             if (searchAddress
-                    && StringUtil.containsWordIgnoreCase(person.getAddress().value, keyword)) {
+                    && person.getAddress().value.toLowerCase().contains(keyword.toLowerCase())) {
                 return true;
             }
             if (searchTag
                     && person.getTags().stream()
-                            .anyMatch(tag -> StringUtil.containsWordIgnoreCase(tag.tagName, keyword))) {
+                            .anyMatch(tag -> tag.tagName.toLowerCase().contains(keyword.toLowerCase()))) {
                 return true;
             }
             // checks if searchLinker(/from) flag is activated and
             // finds all persons who is the linker with the given linkname
             if (searchLinker && person.getLinks().stream()
-                    .anyMatch(link -> StringUtil.containsWordIgnoreCase(link.getLinkName(), keyword)
+                    .anyMatch(link -> link.getLinkName().toLowerCase().contains(keyword.toLowerCase())
                     && link.getLinker().isSamePerson(person))) {
                 return true;
             }
@@ -133,7 +132,7 @@ public class FieldContainsKeywordsPredicate implements Predicate<Person> {
             // checks if searchLinkee (/to) flag is activated and
             // finds all persons who is the linkee of the link with the given linkname
             if (searchLinkee && person.getLinks().stream()
-                    .anyMatch(link -> StringUtil.containsWordIgnoreCase(link.getLinkName(), keyword)
+                    .anyMatch(link -> link.getLinkName().toLowerCase().contains(keyword.toLowerCase())
                     && link.getLinkee().isSamePerson(person))) {
                 return true;
             }
@@ -154,7 +153,7 @@ public class FieldContainsKeywordsPredicate implements Predicate<Person> {
                     }
 
                     String value = entry.getValue();
-                    if (value != null && StringUtil.containsWordIgnoreCase(value, keyword)) {
+                    if (value != null && value.toLowerCase().contains(keyword.toLowerCase())) {
                         return true;
                     }
                 }
