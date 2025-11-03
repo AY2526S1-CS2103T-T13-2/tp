@@ -80,7 +80,8 @@
         "covering-individual-commands": "Covering individual commands",
         "launch-and-shutdown": "Launch and shutdown",
         "scenario-based-end-to-end-testing": "Scenario-based end-to-end testing",
-        "appendix-effort": "Appendix: Effort"
+        "appendix-effort": "Appendix: Effort",
+        "appendix-planned-enhancements": "Appendix: Planned Enhancements"
       },
       "headingKeywords": {}
     },
