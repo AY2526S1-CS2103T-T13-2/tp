@@ -53,7 +53,7 @@ public class CommandLexer {
     }
 
     private static boolean isRestrictedCharacter(char c) {
-        return c == '/' || c == ':' || c == '\"';
+        return c == '\"';
     }
 
     /**
